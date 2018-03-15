@@ -9,7 +9,7 @@ using Projeto.DAL.Context;
 
 namespace Projeto.DAL.Repositories
 {
-    class ProdutoRepositorio : BaseRepositorio<Produto>
+    public class ProdutoRepositorio : BaseRepositorio<Produto>
     {
         public override List<Produto> FindAll()
         {
