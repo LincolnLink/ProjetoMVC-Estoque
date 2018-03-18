@@ -80,3 +80,10 @@ D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\obj\Debug\Proje
 D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\obj\Debug\Projeto.WEB.csproj.CopyComplete
 D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\obj\Debug\Projeto.WEB.dll
 D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\obj\Debug\Projeto.WEB.pdb
+D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\bin\Projeto.BLL.dll
+D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\bin\Projeto.DAL.dll
+D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\bin\Projeto.Entidades.dll
+D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\bin\Projeto.BLL.pdb
+D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\bin\Projeto.DAL.pdb
+D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\bin\Projeto.DAL.dll.config
+D:\COTI informatica\GitHub 20 MVC\ProjetoMVC-Estoque\Projeto.WEB\bin\Projeto.Entidades.pdb
