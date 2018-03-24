@@ -39,5 +39,18 @@ namespace Projeto.DAL.Repositories
                 .ToList();
             }
         }
+
+        //método para retornar todos os produtos pelo nome
+        public List<Produto> FindAllByNome(string nome)
+        {
+            using (DataContext d = new DataContext())
+            {
+                return d.Produto //Consulta em Produto
+                    .Include(p => p.Estoque) //INNER JOIN Estoque
+                    .Where(p => p.NomeProduto.Contains(nome)) //contendo
+                    .OrderBy(p => p.NomeProduto) //order by
+                    .ToList();
+            }
+        }
     }
 }

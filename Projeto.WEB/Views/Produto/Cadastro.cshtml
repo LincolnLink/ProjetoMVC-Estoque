@@ -18,6 +18,28 @@
             //imprimir mensagem no log do navegador..
             console.log('JQuery iniciado!');
 
+            //função ajax para consultar os estoques..
+            $.ajax({
+                type: "POST",
+                url: "/Estoque/ConsultarEstoque",
+                data: {},
+                success: function (lista) {
+                    console.log("Dados: " + lista);
+                    var conteudo = "<option value=''>Escolha uma Opção</option>";
+
+                    for(var i = 0; i < lista.length; i++) {
+                        conteudo += "<option value='" + lista[i].IdEstoque + "'>";
+                        conteudo += lista[i].NomeEstoque;
+                        conteudo += "</option>";
+                    }
+
+                    $("#estoque").html(conteudo);
+                },
+                error: function (e) {
+                    console.log("Erro: " + e.status);
+                }
+            });
+
             //Criando um evento no botão de cadastro..
             $("#btncadastro").click(function (){
 
@@ -36,13 +58,16 @@
                 //imprimir o objetivo
                 console.log(model);
 
+                //função Ajax para consultar os estoque
+                $.ajax({});
+
                 //função AJAX (requisição ao servidor)
                 $.ajax({
 
                     type: "POST", //requisição POST
                     url: "/Produto/CadastrarProduto", //endereço
                     data: model, //dados JSON enviados
-                    sucess: function (msg) { //resultado de sucesso
+                    success: function (msg) { //resultado de sucesso
                         console.log(msg);
 
                         //exibir a mensagem na label

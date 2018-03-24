@@ -1,0 +1,22 @@
+=========================================================
+Executando o Migrations
+Atualizando o banco de dados conforme o mapeamento (CodeFirst)
+
+Tools / NuGet Package Manager / Package Manager Console
+//Escolhe o DAL!
+1) Habilitando o recurso do Migrations no projeto DAL
+
+ PM>enable-migrations -force
+
+2)Atualizando o conteudo do banco de dados:
+
+PM> update-database -verbose
+
+3)Alterando entidade JÁ mapeada!!!
+
+Gerando um script do que será executado no banco de dados:
+PM> update-database -script
+
++ atualiza
+
+PM> update-database -verbose

@@ -27,9 +27,9 @@ namespace Projeto.WEB.Controllers
                     model.NomeEstoque = e.NomeEstoque;
 
                     lista.Add(model);
-
+                    Console.WriteLine(model);
                 }
-
+                Console.WriteLine(lista);
                 return Json(lista);
             }
             catch (Exception e)

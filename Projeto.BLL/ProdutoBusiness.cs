@@ -44,5 +44,11 @@ namespace Projeto.BLL
             ProdutoRepositorio rep = new ProdutoRepositorio();
             return rep.FindById(id);
         }
+
+        public List<Produto> ConsultarPorNome(string nome)
+        {
+            ProdutoRepositorio rep = new ProdutoRepositorio();
+            return rep.FindAllByNome(nome);
+        }
     }
 }

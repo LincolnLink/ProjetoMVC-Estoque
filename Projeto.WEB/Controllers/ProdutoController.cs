@@ -26,8 +26,49 @@ namespace Projeto.WEB.Controllers
         // POST: Produto/CadastrarProduto
         public JsonResult CadastrarProduto(ProdutoViewModelCadastro model)
         {
-            return Json("OK");
+            try
+            {
+                Produto p = new Produto();
+
+                p.NomeProduto = model.Nome;
+                p.Preco = model.Preco;
+                p.Quantidade = model.Quantidade;
+                p.IdEstoque = model.IdEstoque;
+
+                ProdutoBusiness business = new ProdutoBusiness();
+
+                business.Cadastrar(p);
+
+                return Json($"Produto "+p.NomeProduto+" Cadastrado com sucesso! ");
+            }
+            catch (Exception e)
+            {
+                return Json(e.Message);
+            }
+            
         }
 
+        public JsonResult ConsultarProdutos(string filtro)
+        {            
+            try
+            {
+                //declarando uma lista de classe de modelo
+                List<ProdutoViewModelConsulta> lista = new List<ProdutoViewModelConsulta>();
+
+                //instanciando a classe de negócio
+                ProdutoBusiness business = new ProdutoBusiness();
+
+                foreach (Produto p in business.ConsultarPorNome(filtro))
+                {
+                   //TODO
+                }
+
+                return Json(lista);
+            }
+            catch (Exception e)
+            {
+                return Json("Erro: " + e.Message);
+            }
+        }
     }
 }

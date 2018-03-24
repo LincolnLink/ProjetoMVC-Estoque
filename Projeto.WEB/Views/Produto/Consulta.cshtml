@@ -9,6 +9,33 @@
 
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //criando um JSON para enviar os dados
+            var model = {
+
+                filtro: $("#nome").val()
+
+            };
+
+            //consultar os produtos
+            $.ajax({
+                type: "POST",
+                url: "Produto/ConsultarProdutos",
+                data: model,
+
+                success: function (lista) {
+                    console.log(lista);
+
+                },
+                error: function (e) {
+                    console.log("Erro: " + e.status);
+                }
+            });
+        });       
+
+    </script>
 </head>
 <body>
     <div class="row">
@@ -16,6 +43,12 @@
             <h2>Consulta de Produtos</h2>
             <a href="/Home/Index">Voltar</a>
             <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">
+            <label>Informe o nome Produto:</label>
+            <input type="text"  id="nome" class="form-control"/>
         </div>
     </div>
     <div class="row">
