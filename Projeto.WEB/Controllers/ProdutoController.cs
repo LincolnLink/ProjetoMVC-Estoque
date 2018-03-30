@@ -60,7 +60,17 @@ namespace Projeto.WEB.Controllers
 
                 foreach (Produto p in business.ConsultarPorNome(filtro))
                 {
-                   //TODO
+                    ProdutoViewModelConsulta model = new ProdutoViewModelConsulta();
+
+                    model.IdProduto = p.IdProduto;
+                    model.Nome = p.NomeProduto;
+                    model.Preco = p.Preco;
+                    model.Quantidade = p.Quantidade;
+                    model.Total = p.Quantidade * p.Preco;
+                    model.DataCadastro = p.DataCadastro.ToString("dd/MM/yyyy");
+                    model.NomeEstoque = p.Estoque.NomeEstoque;
+
+                    lista.Add(model);
                 }
 
                 return Json(lista);

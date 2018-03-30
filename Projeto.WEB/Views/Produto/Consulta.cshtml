@@ -9,35 +9,13 @@
 
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/_js/ProdutoConsulta.js"></script>
     <script>
-        $(document).ready(function () {
 
-            //criando um JSON para enviar os dados
-            var model = {
-
-                filtro: $("#nome").val()
-
-            };
-
-            //consultar os produtos
-            $.ajax({
-                type: "POST",
-                url: "Produto/ConsultarProdutos",
-                data: model,
-
-                success: function (lista) {
-                    console.log(lista);
-
-                },
-                error: function (e) {
-                    console.log("Erro: " + e.status);
-                }
-            });
-        });       
-
+      
     </script>
 </head>
-<body>
+<body class="container">
     <div class="row">
         <div class="col-md-12">
             <h2>Consulta de Produtos</h2>

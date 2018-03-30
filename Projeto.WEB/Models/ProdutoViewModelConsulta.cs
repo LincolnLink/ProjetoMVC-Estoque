@@ -12,7 +12,7 @@ namespace Projeto.WEB.Models
         public decimal Preco { get; set; }
         public int Quantidade { get; set; }
         public decimal Total { get; set; }
-        public DateTime DataCadastro { get; set; }
+        public string DataCadastro { get; set; }
         public string NomeEstoque { get; set; }
     }
 }

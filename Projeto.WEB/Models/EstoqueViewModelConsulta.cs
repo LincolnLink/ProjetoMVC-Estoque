@@ -9,6 +9,5 @@ namespace Projeto.WEB.Models
     {
         public int IdEstoque { get; set; }
         public string NomeEstoque { get; set; }
-
     }
 }
